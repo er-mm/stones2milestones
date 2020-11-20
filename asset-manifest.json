@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/stones2milestones/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/stones2milestones/static/js/main.dcda4ac6.chunk.js",
+    "main.js.map": "/stones2milestones/static/js/main.dcda4ac6.chunk.js.map",
+    "runtime-main.js": "/stones2milestones/static/js/runtime-main.4a570c14.js",
+    "runtime-main.js.map": "/stones2milestones/static/js/runtime-main.4a570c14.js.map",
+    "static/js/2.9ddcfb43.chunk.js": "/stones2milestones/static/js/2.9ddcfb43.chunk.js",
+    "static/js/2.9ddcfb43.chunk.js.map": "/stones2milestones/static/js/2.9ddcfb43.chunk.js.map",
+    "static/js/3.a867e429.chunk.js": "/stones2milestones/static/js/3.a867e429.chunk.js",
+    "static/js/3.a867e429.chunk.js.map": "/stones2milestones/static/js/3.a867e429.chunk.js.map",
+    "index.html": "/stones2milestones/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/stones2milestones/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.9ddcfb43.chunk.js.LICENSE.txt": "/stones2milestones/static/js/2.9ddcfb43.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a570c14.js",
+    "static/js/2.9ddcfb43.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.dcda4ac6.chunk.js"
+  ]
+}
