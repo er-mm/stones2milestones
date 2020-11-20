@@ -11,7 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
 	card: {
-		height: 270,
+		maxHeight: 350,
 		width: 200,
 		backgroundColor: '#c6c6c6de',
 		margin: 10

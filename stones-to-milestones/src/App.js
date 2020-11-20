@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import theme from './Theme';
 import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles, fade } from '@material-ui/core/styles';
@@ -12,7 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import CreateTeam from './components/CreateTeam';
 import { connect } from 'react-redux';
-import { fetchUsers } from './actions/todoActions';
+import { fetchUsers, fetchTeamNames } from './actions/todoActions';
 import User from './components/User';
 
 const drawerWidth = 240;
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 	content: {
 		flexGrow: 1,
 		padding: theme.spacing(3),
-		marginTop: 10
+		marginTop: 10,
 	},
 
 	title: {
@@ -54,12 +54,14 @@ const useStyles = makeStyles((theme) => ({
 export function App(props) {
 	const classes = useStyles();
 	const [teamName, setTeamName] = useState('');
+	const { fetchTeamNames } = props;
+	useEffect(()=> fetchTeamNames(), []);
+
 	const handleClick = (text, e) => {
 		e.preventDefault();
 		console.log(text);
 		setTeamName(text);
 		props.fetchUsers();
-
 	}
 
 	return (
@@ -123,4 +125,4 @@ const mapStateToProps = state => ({
 	users: state.user.users
 })
 
-export default connect(mapStateToProps, { fetchUsers })(App)
+export default connect(mapStateToProps, { fetchUsers, fetchTeamNames })(App)

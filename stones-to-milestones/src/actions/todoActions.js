@@ -1,5 +1,5 @@
-import { CREATE_TEAM, FETCH_USERS, CREATE_USER, DELETE_USER } from './types';
-
+import { CREATE_TEAM, FETCH_USERS, CREATE_USER, DELETE_USER, FETCH_TEAM } from './types';
+const api = 'http://localhost:2000/users';
 export const createTeam = (teamName) => dispatch => {
     console.log(' Action -> createTeam-->');
     dispatch({
@@ -8,9 +8,19 @@ export const createTeam = (teamName) => dispatch => {
     });
 }
 
+export const fetchTeamNames = () => dispatch => {
+    console.log(' Action -> fetching team list-->');
+    fetch(api)
+        .then(res => res.json())
+        .then(data => dispatch({
+            type: FETCH_TEAM,
+            payload: data.users
+        }));
+}
+
 export const fetchUsers = () => dispatch => {
     console.log(' Action -> fetching user list-->');
-    fetch(' http://localhost:2000/users')
+    fetch(api)
         .then(res => res.json())
         .then(data => dispatch({
             type: FETCH_USERS,
@@ -21,7 +31,7 @@ export const fetchUsers = () => dispatch => {
 export const createUser = userDetails => dispatch => {
     console.log('Action -> Adding suer -- userDetails');
     console.log(userDetails);
-    fetch(' http://localhost:2000/users', {
+    fetch(api, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
@@ -37,7 +47,7 @@ export const createUser = userDetails => dispatch => {
 
 export const deleteUser = deleteUserID => dispatch => {
     console.log('Action -> deleting User');
-    fetch(' http://localhost:2000/users/' + deleteUserID, {
+    fetch(`${api}/` + deleteUserID, {
         method: 'DELETE',
         headers: {
             'Content-type': 'application/json'
