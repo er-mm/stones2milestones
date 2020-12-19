@@ -14,7 +14,7 @@ export const fetchTeamNames = () => dispatch => {
         .then(res => res.json())
         .then(data => dispatch({
             type: FETCH_TEAM,
-            payload: data.users
+            payload: data
         }));
 }
 

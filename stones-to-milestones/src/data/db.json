@@ -50,12 +50,6 @@
     },
     {
       "name": "Mayank",
-      "desc": "Front End Dev\nReactJS",
-      "team": "Development",
-      "id": 17
-    },
-    {
-      "name": "Mayank",
       "desc": "Mittal",
       "team": "Team1",
       "id": 18
@@ -65,6 +59,12 @@
       "desc": "Tester",
       "team": "Testing",
       "id": 19
+    },
+    {
+      "name": "Anurag",
+      "desc": "Node dev",
+      "team": "Development",
+      "id": 20
     }
   ]
 }

@@ -22,7 +22,6 @@
   },
   "scripts": {
     "start": "run-p start:server start:react",
-    "start:server": "json-server src/data/db.json --port 2000",
     "start:react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
